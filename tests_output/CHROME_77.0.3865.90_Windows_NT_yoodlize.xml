@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="1"
+            tests="2">
+
+  <testsuite name="yoodlize"
+    errors="0" failures="1" hostname="" id="" package="yoodlize" skipped="0"
+    tests="2" time="77.97" timestamp="">
+  
+    <testcase name="see all/home/browse" classname="yoodlize" time="51.64" assertions="9">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Search Function" classname="yoodlize" time="26.33" assertions="11">  <failure message="Timed out while waiting for element &lt;body&gt; to be present for 8000 milliseconds. - expected [0;32m&#34;found&#34;[0m but got: [0;31m&#34;not found&#34;[0m">    at Object.beforeEach (C:\Users\benpe\DevMountain\practice\practiceAutomation\tests\yoodlize.js:5:14)
+    at new Promise (&lt;anonymous&gt;)</failure>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <failure message="    at Object.beforeEach (C:\Users\benpe\DevMountain\practice\practiceAutomation\tests\yoodlize.js:5:14)">    at new Promise (&lt;anonymous&gt;)</failure>
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>
