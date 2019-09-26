@@ -2,7 +2,7 @@
 module.exports = {
     beforeEach: browser => {
         browser.url('https://alpha.yoodlize.com')
-            .waitForElementPresent('body', 8000)
+            //.waitForElementPresent('body', 10000)
     },
     after: browser => {
         browser.end()
@@ -12,21 +12,21 @@ module.exports = {
             .useXpath()
             .waitForElementPresent('(//div[@class="sc-jqCOkK djSgtl sc-gqjmRU fmVgeN"])[1]', 10000) //see all RV
             .click('(//div[@class="sc-jqCOkK djSgtl sc-gqjmRU fmVgeN"])[1]') //see all RV
-            .waitForElementPresent('//div[@class="sc-jKVCRD jSqgxr"]', 8000)
+            .waitForElementPresent('//div[@class="sc-jKVCRD jSqgxr"]', 10000)
             .verify.containsText('//div[@class="sc-jKVCRD jSqgxr"]', "Recreational Vehicles")
             .waitForElementPresent('//img[@src="/images/logo/blueRaw.png"]') //home img
             .click('//img[@src="/images/logo/blueRaw.png"]') //home img
 
             .waitForElementPresent('(//div[@class="sc-jqCOkK djSgtl sc-gqjmRU fmVgeN"])[2]', 10000) //see all
             .click('(//div[@class="sc-jqCOkK djSgtl sc-gqjmRU fmVgeN"])[2]') //see all
-            .waitForElementPresent('//div[@class="sc-jKVCRD jSqgxr"]', 8000)
+            .waitForElementPresent('//div[@class="sc-jKVCRD jSqgxr"]', 10000)
             .verify.containsText('//div[@class="sc-jKVCRD jSqgxr"]', "Outdoor Gear")
             .waitForElementPresent('//img[@src="/images/logo/blueRaw.png"]') //home img
             .click('//img[@src="/images/logo/blueRaw.png"]') //home img
 
             .waitForElementPresent('(//div[@class="sc-jqCOkK djSgtl sc-gqjmRU fmVgeN"])[3]', 10000) //see all
             .click('(//div[@class="sc-jqCOkK djSgtl sc-gqjmRU fmVgeN"])[3]') //see all
-            .waitForElementPresent('//div[@class="sc-jKVCRD jSqgxr"]', 8000)
+            .waitForElementPresent('//div[@class="sc-jKVCRD jSqgxr"]', 10000)
             .verify.containsText('//div[@class="sc-jKVCRD jSqgxr"]', "Electronics")
             .waitForElementPresent('//img[@src="/images/logo/blueRaw.png"]') //home img
             .click('//img[@src="/images/logo/blueRaw.png"]') //home img

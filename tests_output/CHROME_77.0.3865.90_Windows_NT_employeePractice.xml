@@ -5,9 +5,9 @@
 
   <testsuite name="employeePractice"
     errors="0" failures="0" hostname="" id="" package="employeePractice" skipped="0"
-    tests="4" time="29.35" timestamp="">
+    tests="4" time="22.24" timestamp="">
   
-    <testcase name="Check for change, save, and cancel button. Change, Save, and cancel all entries" classname="employeePractice" time="22.42" assertions="42">
+    <testcase name="Check for change, save, and cancel button. Change, Save, and cancel all entries" classname="employeePractice" time="15.47" assertions="42">
 
     
 
@@ -94,7 +94,7 @@
     
     </testcase>
   
-    <testcase name="Add Employee" classname="employeePractice" time="3.264" assertions="9">
+    <testcase name="Add Employee" classname="employeePractice" time="2.967" assertions="9">
 
     
 
@@ -115,7 +115,7 @@
     
     </testcase>
   
-    <testcase name="Check for errors" classname="employeePractice" time="2.268" assertions="8">
+    <testcase name="Check for errors" classname="employeePractice" time="2.428" assertions="8">
 
     
 
@@ -134,7 +134,7 @@
     
     </testcase>
   
-    <testcase name="no entry errors" classname="employeePractice" time="1.401" assertions="8">
+    <testcase name="no entry errors" classname="employeePractice" time="1.372" assertions="8">
 
     
 
