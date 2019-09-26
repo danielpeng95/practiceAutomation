@@ -79,7 +79,7 @@ module.exports = {
             .waitForElementPresent('//img[@src="/images/logo/blueRaw.png"]', 10000) //home img
             .click('//img[@src="/images/logo/blueRaw.png"]') //home img
 
-            .pause(10000)
+            //.pause(3000)
 
     },
     'Search Function': browser => {
@@ -94,14 +94,13 @@ module.exports = {
             .click('(//a[@class="rc-pagination-item-link"])[1]') //backward arrow key
             .waitForElementPresent('(//div[@class="_1WAWo"])[1]', 10000) //first image of DVD result
             .click('(//div[@class="_1WAWo"])[1]')
-            .pause(1000)
+            //.pause(1000)
             .verify.containsText('//div[@class="sc-bdVaJa iyjQMV"]', "DVD")
             .verify.containsText('//div[@class="sc-bdVaJa iyjQMV"]', "Description")
             .verify.containsText('//div[@class="sc-bdVaJa iyjQMV"]', "Rental Rules")
             .verify.visible('//div[@headerdetails="true"]')
             .verify.visible('(//div[@emphasis="true"])[1]')
-
-            .pause(3000)
+            //.pause(3000)
         
     }
 }

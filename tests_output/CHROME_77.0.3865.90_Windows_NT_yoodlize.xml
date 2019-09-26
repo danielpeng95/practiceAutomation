@@ -5,9 +5,9 @@
 
   <testsuite name="yoodlize"
     errors="0" failures="0" hostname="" id="" package="yoodlize" skipped="0"
-    tests="2" time="79.52" timestamp="">
+    tests="2" time="69.80" timestamp="">
   
-    <testcase name="see all/home/browse" classname="yoodlize" time="67.81" assertions="36">
+    <testcase name="see all/home/browse" classname="yoodlize" time="60.44" assertions="36">
 
     
 
@@ -82,7 +82,7 @@
     
     </testcase>
   
-    <testcase name="Search Function" classname="yoodlize" time="11.71" assertions="10">
+    <testcase name="Search Function" classname="yoodlize" time="9.354" assertions="10">
 
     
 
