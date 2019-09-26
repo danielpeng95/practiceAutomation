@@ -4,6 +4,9 @@ module.exports = {
         weatherPage = browser.page.weatherman()
         weatherPage.navigate()
     },
+    after: browser => {
+        browser.end()
+    },
     'Search for city': browser => {
         weatherPage
             .setValue('@searchBar', ['San Diego', browser.Keys.ENTER])
@@ -28,20 +31,20 @@ module.exports = {
             .waitForElementPresent('@errorMessage')
             .expect.element('@errorMessage').text.to.equal('There was a problem fetching the weather!')
     },
-    // 'Search again': browser => {
-    //     weatherPage
-    //         .setValue('@searchBar', '95820')
-    //         .click('@searchButton')
-    //         .waitForElementPresent('@resultCity')
-    //         .click('@searchAgainButton')
-    //         .expect.element('@searchBar').to.be.visible.before(5000)
-    // },
-    // 'Try again': browser => {
-    //     weatherPage
-    //         .setValue('@searchBar', '')
-    //         .click('@searchButton')
-    //         .waitForElementPresent('@errorMessage')
-    //         .click('@tryAgainButton')
-    //         .expect.element('@searchBar').to.be.visible.before(5000)
-    // }
+    'Search again': browser => {
+        weatherPage
+            .setValue('@searchBar', '95820')
+            .click('@searchButton')
+            .waitForElementPresent('@resultCity')
+            .click('@searchAgainButton')
+            .expect.element('@searchBar').to.be.visible.before(5000)
+    },
+    'Try again': browser => {
+        weatherPage
+            .setValue('@searchBar', '')
+            .click('@searchButton')
+            .waitForElementPresent('@errorMessage')
+            .click('@tryAgainButton')
+            .expect.element('@searchBar').to.be.visible.before(5000)
+    }
 }

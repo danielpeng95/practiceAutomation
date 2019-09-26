@@ -1,12 +1,15 @@
+var moreEmployee
 module.exports = {
     beforeEach: browser => {
-        browser.url('https://devmountain-qa.github.io/employee-manager/1.2_Version/index.html')
+        moreEmployee = browser.page.employeePractice()
+        moreEmployee.navigate()
+        moreEmployee
             .waitForElementPresent('body', 8000)
             .verify.urlContains("https://devmountain-qa.github.io/employee-manager/1.2_Version/index.html")
             .waitForElementVisible('.main-container')
     },
     after: browser => {
-        browser.end()
+        moreEmployee.end()
     },
     'Check for change, save, and cancel button. Change, Save, and cancel all entries': browser => {
         var employee1 = {
@@ -15,204 +18,262 @@ module.exports = {
             Title: 'OEC'
         } //you can also declare this above module.exports
 
-        browser
+        var employee2 = {
+            Name: 'Barn Man',
+            Phone: '2637849863',
+            Title: 'OTTC'
+        }
+        var employee3 = {
+            Name: 'Weaver PHILY',
+            Phone: '8755473849',
+            Title: 'GerMan'
+        }
+        var employee4 = {
+            Name: 'Osbone T-bone',
+            Phone: '8376453674',
+            Title: 'Eng DD'
+        }
+        var employee5 = {
+            Name: 'BER Dollie',
+            Phone: '9876543456',
+            Title: 'Front Dev'
+        }
+        var employee6 = {
+            Name: 'Will Harry',
+            Phone: '0987656789',
+            Title: 'Dev Fronty'
+        }
+        var employee7 = {
+            Name: 'Estrada Rude man',
+            Phone: '7836746356',
+            Title: 'Back Dev'
+        }
+        var employee8 = {
+            Name: 'White Louis',
+            Phone: '9878976432',
+            Title: 'Full Dev'
+        }
+        var employee9 = {
+            Name: 'Sparky Eve',
+            Phone: '7867564567',
+            Title: 'Manage Product person'
+        }
+        var employee10 = {
+            Name: 'Brewer Person',
+            Phone: '0909878786',
+            Title: 'Manage Sales man'
+        }
+
+        moreEmployee
+        
             .click('[name="employee1"]')
-            .clearValue('[name="nameEntry"]')
-            .setValue('[name="nameEntry"]', employee1.Name)
-            .clearValue('[name="phoneEntry"]')
-            .setValue('[name="phoneEntry"]', employee1.Phone)
-            .clearValue('[name="titleEntry"]')
-            .setValue('[name="titleEntry"]', employee1.Title)
-            .click('[name="save"]')
-            .verify.value('[name="nameEntry"]', employee1.Name)
-            .verify.value('[name="phoneEntry"]', employee1.Phone)
-            .verify.value('[name="titleEntry"]', employee1.Title)
-            .clearValue('[name="nameEntry"]')
-            .setValue('[name="nameEntry"]', 'Ortie')
-            .clearValue('[name="phoneEntry"]')
-            .setValue('[name="phoneEntry"]', '123890')
-            .clearValue('[name="titleEntry"]')
-            .setValue('[name="titleEntry"]', 'OECCOE')
+            .clearValue('@Name')
+            .setValue('@Name', employee1.Name)
+            .clearValue('@Phone')
+            .setValue('@Phone', employee1.Phone)
+            .clearValue('@Title')
+            .setValue('@Title', employee1.Title)
+            .click('@Save')
+            .verify.value('@Name', employee1.Name)
+            .verify.value('@Phone', employee1.Phone)
+            .verify.value('@Title', employee1.Title)
+            .clearValue('@Name')
+            .setValue('@Name', 'Ortie')
+            .clearValue('@Phone')
+            .setValue('@Phone', '123890')
+            .clearValue('@Title')
+            .setValue('@Title', 'OECCOE')
             .click('[name="cancel"]')
-            .verify.value('[name="nameEntry"]', employee1.Name)
-            .verify.value('[name="phoneEntry"]', employee1.Phone)
-            .verify.value('[name="titleEntry"]', employee1.Title)
+            .verify.value('@Name', employee1.Name)
+            .verify.value('@Phone', employee1.Phone)
+            .verify.value('@Title', employee1.Title)
 
             .click('[name="employee2"]')
-            .clearValue('[name="nameEntry"]')
-            .setValue('[name="nameEntry"]', 'Barn Man')
-            .clearValue('[name="phoneEntry"]')
-            .setValue('[name="phoneEntry"]', '2637849863')
-            .clearValue('[name="titleEntry"]')
-            .setValue('[name="titleEntry"]', 'OTTC')
-            .click('[name="save"]')
-            .verify.value('[name="nameEntry"]', "Barn Man")
-            .verify.value('[name="phoneEntry"]', "2637849863")
-            .verify.value('[name="titleEntry"]', "OTTC")
-            .clearValue('[name="nameEntry"]')
-            .setValue('[name="nameEntry"]', 'man')
-            .clearValue('[name="phoneEntry"]')
-            .setValue('[name="phoneEntry"]', 'yolo')
-            .clearValue('[name="titleEntry"]')
-            .setValue('[name="titleEntry"]', 'haha')
+            .clearValue('@Name')
+            .setValue('@Name', employee2.Name)
+            .clearValue('@Phone')
+            .setValue('@Phone', employee2.Phone)
+            .clearValue('@Title')
+            .setValue('@Title', employee2.Title)
+            .click('@Save')
+            .verify.value('@Name', employee2.Name)
+            .verify.value('@Phone', employee2.Phone)
+            .verify.value('@Title', employee2.Title)
+            .clearValue('@Name')
+            .setValue('@Name', 'man')
+            .clearValue('@Phone')
+            .setValue('@Phone', 'yolo')
+            .clearValue('@Title')
+            .setValue('@Title', 'haha')
             .click('[name="cancel"]')
-            .verify.value('[name="nameEntry"]', "Barn Man")
-            .verify.value('[name="phoneEntry"]', "2637849863")
-            .verify.value('[name="titleEntry"]', "OTTC")
+            .verify.value('@Name', employee2.Name)
+            .verify.value('@Phone', employee2.Phone)
+            .verify.value('@Title', employee2.Title)
 
             .click('[name="employee3"]')
-            .clearValue('[name="nameEntry"]')
-            .setValue('[name="nameEntry"]', 'Weaver PHILY')
-            .clearValue('[name="phoneEntry"]')
-            .setValue('[name="phoneEntry"]', '8755473849')
-            .clearValue('[name="titleEntry"]')
-            .setValue('[name="titleEntry"]', 'GerMan')
-            .click('[name="save"]')
-            .verify.value('[name="titleEntry"]', "GerMan")
-            .verify.value('[name="phoneEntry"]', "8755473849")
-            .verify.value('[name="nameEntry"]', "Weaver PHILY")
-            .clearValue('[name="nameEntry"]')
-            .setValue('[name="nameEntry"]', 'man')
-            .clearValue('[name="phoneEntry"]')
-            .setValue('[name="phoneEntry"]', 'yolo')
-            .clearValue('[name="titleEntry"]')
-            .setValue('[name="titleEntry"]', 'haha')
+            .clearValue('@Name')
+            .setValue('@Name', employee3.Name)
+            .clearValue('@Phone')
+            .setValue('@Phone', employee3.Phone)
+            .clearValue('@Title')
+            .setValue('@Title', employee3.Title)
+            .click('@Save')
+            .verify.value('@Title', employee3.Title)
+            .verify.value('@Phone', employee3.Phone)
+            .verify.value('@Name', employee3.Name)
+            .clearValue('@Name')
+            .setValue('@Name', 'man')
+            .clearValue('@Phone')
+            .setValue('@Phone', 'yolo')
+            .clearValue('@Title')
+            .setValue('@Title', 'haha')
             .click('[name="cancel"]')
-            .verify.value('[name="nameEntry"]', "Weaver PHILY")
-            .verify.value('[name="phoneEntry"]', "8755473849")
-            .verify.value('[name="titleEntry"]', "GerMan")
+            .verify.value('@Name', employee3.Name)
+            .verify.value('@Phone', employee3.Phone)
+            .verify.value('@Title', employee3.Title)
 
             .click('[name="employee4"]')
-            .clearValue('[name="nameEntry"]')
-            .setValue('[name="nameEntry"]', 'Osbone T-bone')
-            .clearValue('[name="phoneEntry"]')
-            .setValue('[name="phoneEntry"]', '8376453674')
-            .clearValue('[name="titleEntry"]')
-            .setValue('[name="titleEntry"]', 'Eng DD')
-            .click('[name="save"]')
-            .verify.value('[name="titleEntry"]', "Eng DD")
-            .verify.value('[name="phoneEntry"]', "8376453674")
-            .verify.value('[name="nameEntry"]', "Osbone T-bone")
+            .clearValue('@Name')
+            .setValue('@Name', employee4.Name)
+            .clearValue('@Phone')
+            .setValue('@Phone', employee4.Phone)
+            .clearValue('@Title')
+            .setValue('@Title', employee4.Title)
+            .click('@Save')
+            .verify.value('@Title', employee4.Title)
+            .verify.value('@Phone', employee4.Phone)
+            .verify.value('@Name', employee4.Name)
 
 
             .click('[name="employee5"]')
-            .clearValue('[name="nameEntry"]')
-            .setValue('[name="nameEntry"]', 'BER Dollie')
-            .clearValue('[name="phoneEntry"]')
-            .setValue('[name="phoneEntry"]', '9876543456')
-            .clearValue('[name="titleEntry"]')
-            .setValue('[name="titleEntry"]', 'Front Dev')
-            .click('[name="save"]')
-            .verify.value('[name="titleEntry"]', "Front Dev")
-            .verify.value('[name="phoneEntry"]', "9876543456")
-            .verify.value('[name="nameEntry"]', "BER Dollie")
+            .clearValue('@Name')
+            .setValue('@Name', employee5.Name)
+            .clearValue('@Phone')
+            .setValue('@Phone', employee5.Phone)
+            .clearValue('@Title')
+            .setValue('@Title', employee5.Title)
+            .click('@Save')
+            .verify.value('@Title', employee5.Title)
+            .verify.value('@Phone', employee5.Phone)
+            .verify.value('@Name', employee5.Name)
 
 
             .click('[name="employee6"]')
-            .clearValue('[name="nameEntry"]')
-            .setValue('[name="nameEntry"]', 'Will Harry')
-            .clearValue('[name="phoneEntry"]')
-            .setValue('[name="phoneEntry"]', '0987656789')
-            .clearValue('[name="titleEntry"]')
-            .setValue('[name="titleEntry"]', 'Dev Fronty')
-            .click('[name="save"]')
-            .verify.value('[name="titleEntry"]', "Dev Fronty")
-            .verify.value('[name="phoneEntry"]', "0987656789")
-            .verify.value('[name="nameEntry"]', "Will Harry")
+            .clearValue('@Name')
+            .setValue('@Name', employee6.Name)
+            .clearValue('@Phone')
+            .setValue('@Phone', employee6.Phone)
+            .clearValue('@Title')
+            .setValue('@Title', employee6.Title)
+            .click('@Save')
+            .verify.value('@Title', employee6.Title)
+            .verify.value('@Phone', employee6.Phone)
+            .verify.value('@Name', employee6.Name)
 
 
             .click('[name="employee7"]')
-            .clearValue('[name="nameEntry"]')
-            .setValue('[name="nameEntry"]', 'Estrada Rude man')
-            .clearValue('[name="phoneEntry"]')
-            .setValue('[name="phoneEntry"]', '7836746356')
-            .clearValue('[name="titleEntry"]')
-            .setValue('[name="titleEntry"]', 'Back Dev')
-            .click('[name="save"]')
-            .verify.value('[name="titleEntry"]', "Back Dev")
-            .verify.value('[name="phoneEntry"]', "7836746356")
-            .verify.value('[name="nameEntry"]', "Estrada Rude man")
+            .clearValue('@Name')
+            .setValue('@Name', employee7.Name)
+            .clearValue('@Phone')
+            .setValue('@Phone', employee7.Phone)
+            .clearValue('@Title')
+            .setValue('@Title', employee7.Title)
+            .click('@Save')
+            .verify.value('@Title', employee7.Title)
+            .verify.value('@Phone', employee7.Phone)
+            .verify.value('@Name', employee7.Name)
 
 
             .click('[name="employee8"]')
-            .clearValue('[name="nameEntry"]')
-            .setValue('[name="nameEntry"]', 'White Louis')
-            .clearValue('[name="phoneEntry"]')
-            .setValue('[name="phoneEntry"]', '9878976432')
-            .clearValue('[name="titleEntry"]')
-            .setValue('[name="titleEntry"]', 'Full Dev')
-            .click('[name="save"]')
-            .verify.value('[name="titleEntry"]', "Full Dev")
-            .verify.value('[name="phoneEntry"]', "9878976432")
-            .verify.value('[name="nameEntry"]', "White Louis")
+            .clearValue('@Name')
+            .setValue('@Name', employee8.Name)
+            .clearValue('@Phone')
+            .setValue('@Phone', employee8.Phone)
+            .clearValue('@Title')
+            .setValue('@Title', employee8.Title)
+            .click('@Save')
+            .verify.value('@Title', employee8.Title)
+            .verify.value('@Phone', employee8.Phone)
+            .verify.value('@Name', employee8.Name)
 
 
             .click('[name="employee9"]')
-            .clearValue('[name="nameEntry"]')
-            .setValue('[name="nameEntry"]', 'Sparky Eve')
-            .clearValue('[name="phoneEntry"]')
-            .setValue('[name="phoneEntry"]', '7867564567')
-            .clearValue('[name="titleEntry"]')
-            .setValue('[name="titleEntry"]', 'Manage Product person')
-            .click('[name="save"]')
-            .verify.value('[name="titleEntry"]', "Manage Product person")
-            .verify.value('[name="phoneEntry"]', "7867564567")
-            .verify.value('[name="nameEntry"]', "Sparky Eve")
+            .clearValue('@Name')
+            .setValue('@Name', employee9.Name)
+            .clearValue('@Phone')
+            .setValue('@Phone', employee9.Phone)
+            .clearValue('@Title')
+            .setValue('@Title', employee9.Title)
+            .click('@Save')
+            .verify.value('@Title', employee9.Title)
+            .verify.value('@Phone', employee9.Phone)
+            .verify.value('@Name', employee9.Name)
 
 
             .click('[name="employee10"]')
-            .clearValue('[name="nameEntry"]')
-            .setValue('[name="nameEntry"]', 'Brewer Person')
-            .clearValue('[name="phoneEntry"]')
-            .setValue('[name="phoneEntry"]', '0909878786')
-            .clearValue('[name="titleEntry"]')
-            .setValue('[name="titleEntry"]', 'Manage Sales man')
-            .click('[name="save"]')
-            .verify.value('[name="titleEntry"]', "Manage Sales man")
-            .verify.value('[name="phoneEntry"]', "0909878786")
-            .verify.value('[name="nameEntry"]', "Brewer Person")
+            .clearValue('@Name')
+            .setValue('@Name', employee10.Name)
+            .clearValue('@Phone')
+            .setValue('@Phone', employee10.Phone)
+            .clearValue('@Title')
+            .setValue('@Title', employee10.Title)
+            .click('@Save')
+            .verify.value('@Title', employee10.Title)
+            .verify.value('@Phone', employee10.Phone)
+            .verify.value('@Name', employee10.Name)
 
 
     },
     'Add Employee': browser => {
-        browser
+        var newEmployee1 = {
+            Name: 'Funny Person',
+            Phone: '8498760987',
+            Title: 'Jobless'
+        }
+
+        var newEmployee2 = {
+            Name: 'Crazy Dude',
+            Phone: '1567489374',
+            Title: 'has one job'
+        }
+        moreEmployee
             .click('[name="addEmployee"]')
             .click('[name="employee11"]')
-            .clearValue('[name="nameEntry"]')
-            .setValue('[name="nameEntry"]', 'Person funny')
-            .clearValue('[name="phoneEntry"]')
-            .setValue('[name="phoneEntry"]', '8907654567')
-            .clearValue('[name="titleEntry"]')
-            .setValue('[name="titleEntry"]', 'Jobless')
-            .click('[name="save"]')
-            .verify.value('[name="titleEntry"]', "Jobless")
-            .verify.value('[name="phoneEntry"]', "8907654567")
-            .verify.value('[name="nameEntry"]', "Person funny")
+            .clearValue('@Name')
+            .setValue('@Name', newEmployee1.Name)
+            .clearValue('@Phone')
+            .setValue('@Phone', newEmployee1.Phone)
+            .clearValue('@Title')
+            .setValue('@Title', newEmployee1.Title)
+            .click('@Save')
+            .verify.value('@Title', newEmployee1.Title)
+            .verify.value('@Phone', newEmployee1.Phone)
+            .verify.value('@Name', newEmployee1.Name)
 
             .click('[name="addEmployee"]')
             .click('[name="employee12"]')
-            .clearValue('[name="nameEntry"]')
-            .setValue('[name="nameEntry"]', 'Crazy dude')
-            .clearValue('[name="phoneEntry"]')
-            .setValue('[name="phoneEntry"]', '8374657686')
-            .clearValue('[name="titleEntry"]')
-            .setValue('[name="titleEntry"]', 'Has one Job')
-            .click('[name="save"]')
-            .verify.value('[name="titleEntry"]', "Has one Job")
-            .verify.value('[name="phoneEntry"]', "8374657686")
-            .verify.value('[name="nameEntry"]', "Crazy dude")
+            .clearValue('@Name')
+            .setValue('@Name', newEmployee2.Name)
+            .clearValue('@Phone')
+            .setValue('@Phone', newEmployee2.Phone)
+            .clearValue('@Title')
+            .setValue('@Title', newEmployee2.Title)
+            .click('@Save')
+            .verify.value('@Title', newEmployee2.Title)
+            .verify.value('@Phone', newEmployee2.Phone)
+            .verify.value('@Name', newEmployee2.Name)
 
     },
     'Check for errors': browser => {
-        browser
+        moreEmployee
             .click('[name="employee1"]')
-            .clearValue('[name="nameEntry"]')
-            .setValue('[name="nameEntry"]', 'Ortiz Barniejfisla;jifdl;aisjdifl;dsajifd')
-            .clearValue('[name="phoneEntry"]')
-            .setValue('[name="phoneEntry"]', '1234567890sdajfildsa')
-            .clearValue('[name="titleEntry"]')
-            .setValue('[name="titleEntry"]', '12C382938@#$#@EWF')
-            .click('[name="save"]')
+            .clearValue('@Name')
+            .setValue('@Name', 'Ortiz Barniejfisla;jifdl;aisjdifl;dsajifd')
+            .clearValue('@Phone')
+            .setValue('@Phone', '1234567890sdajfildsa')
+            .clearValue('@Title')
+            .setValue('@Title', '12C382938@#$#@EWF')
+            .click('@Save')
             .verify.visible(".errorCard")
             .verify.elementPresent(".invalidInfo")
             .verify.elementNotPresent(".hidden")
@@ -221,15 +282,15 @@ module.exports = {
             .verify.elementNotPresent(".invalidInfo")
     },
     'no entry errors': browser => {
-        browser
+        moreEmployee
             .click('[name="employee1"]')
-            .clearValue('[name="nameEntry"]')
-            .setValue('[name="nameEntry"]', '')
-            .clearValue('[name="phoneEntry"]')
-            .setValue('[name="phoneEntry"]', ' ')
-            .clearValue('[name="titleEntry"]')
-            .setValue('[name="titleEntry"]', '')
-            .click('[name="save"]')
+            .clearValue('@Name')
+            .setValue('@Name', '')
+            .clearValue('@Phone')
+            .setValue('@Phone', ' ')
+            .clearValue('@Title')
+            .setValue('@Title', '')
+            .click('@Save')
             .verify.visible(".errorCard")
             .verify.elementPresent(".invalidInfo")
             .verify.elementNotPresent(".hidden")

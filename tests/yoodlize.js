@@ -59,23 +59,29 @@ module.exports = {
             .waitForElementPresent('//img[@src="/images/logo/blueRaw.png"]') //home img
             .click('//img[@src="/images/logo/blueRaw.png"]') //home img
 
+
+            //Browse Categories
             .waitForElementPresent('(//a[@class="sc-esjQYD cZSeUZ"])[16]', 10000) //Browse Categories
             .click('(//a[@class="sc-esjQYD cZSeUZ"])[16]') //Browse Categories
+            .verify.containsText('//div[@class="sc-jKVCRD jSqgxr"]', "Tools")
             .waitForElementPresent('//img[@src="/images/logo/blueRaw.png"]', 10000) //home img
             .click('//img[@src="/images/logo/blueRaw.png"]') //home img
 
             .waitForElementPresent('(//a[@class="sc-esjQYD cZSeUZ"])[17]', 10000) //Browse Categories
             .click('(//a[@class="sc-esjQYD cZSeUZ"])[17]') //Browse Categories
+            .verify.containsText('//div[@class="sc-jKVCRD jSqgxr"]', "Outdoor")
             .waitForElementPresent('//img[@src="/images/logo/blueRaw.png"]', 10000) //home img
             .click('//img[@src="/images/logo/blueRaw.png"]') //home img
 
             .waitForElementPresent('(//a[@class="sc-esjQYD cZSeUZ"])[18]', 10000) //Browse Categories
             .click('(//a[@class="sc-esjQYD cZSeUZ"])[18]') //Browse Categories
+            .verify.containsText('//div[@class="sc-jKVCRD jSqgxr"]', "Electronics")
             .waitForElementPresent('//img[@src="/images/logo/blueRaw.png"]', 10000) //home img
             .click('//img[@src="/images/logo/blueRaw.png"]') //home img
 
             .waitForElementPresent('(//a[@class="sc-esjQYD cZSeUZ"])[19]', 10000) //Browse Categories
             .click('(//a[@class="sc-esjQYD cZSeUZ"])[19]') //Browse Categories
+            .verify.containsText('//div[@class="sc-jKVCRD jSqgxr"]', "Party")
             .waitForElementPresent('//img[@src="/images/logo/blueRaw.png"]', 10000) //home img
             .click('//img[@src="/images/logo/blueRaw.png"]') //home img
 
