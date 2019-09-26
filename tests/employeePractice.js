@@ -9,18 +9,24 @@ module.exports = {
         browser.end()
     },
     'Check for change, save, and cancel button. Change, Save, and cancel all entries': browser => {
+        var employee1 = {
+            Name: 'Ortiz Barnie',
+            Phone: '1234567890',
+            Title: 'OEC'
+        } //you can also declare this above module.exports
+
         browser
             .click('[name="employee1"]')
             .clearValue('[name="nameEntry"]')
-            .setValue('[name="nameEntry"]', 'Ortiz Barnie')
+            .setValue('[name="nameEntry"]', employee1.Name)
             .clearValue('[name="phoneEntry"]')
-            .setValue('[name="phoneEntry"]', '1234567890')
+            .setValue('[name="phoneEntry"]', employee1.Phone)
             .clearValue('[name="titleEntry"]')
-            .setValue('[name="titleEntry"]', 'OEC')
+            .setValue('[name="titleEntry"]', employee1.Title)
             .click('[name="save"]')
-            .verify.value('[name="nameEntry"]', "Ortiz Barnie")
-            .verify.value('[name="phoneEntry"]', "1234567890")
-            .verify.value('[name="titleEntry"]', "OEC")
+            .verify.value('[name="nameEntry"]', employee1.Name)
+            .verify.value('[name="phoneEntry"]', employee1.Phone)
+            .verify.value('[name="titleEntry"]', employee1.Title)
             .clearValue('[name="nameEntry"]')
             .setValue('[name="nameEntry"]', 'Ortie')
             .clearValue('[name="phoneEntry"]')
@@ -28,9 +34,9 @@ module.exports = {
             .clearValue('[name="titleEntry"]')
             .setValue('[name="titleEntry"]', 'OECCOE')
             .click('[name="cancel"]')
-            .verify.value('[name="nameEntry"]', "Ortiz Barnie")
-            .verify.value('[name="phoneEntry"]', "1234567890")
-            .verify.value('[name="titleEntry"]', "OEC")
+            .verify.value('[name="nameEntry"]', employee1.Name)
+            .verify.value('[name="phoneEntry"]', employee1.Phone)
+            .verify.value('[name="titleEntry"]', employee1.Title)
 
             .click('[name="employee2"]')
             .clearValue('[name="nameEntry"]')
