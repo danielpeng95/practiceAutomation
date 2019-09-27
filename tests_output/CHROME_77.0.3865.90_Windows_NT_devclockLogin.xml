@@ -5,9 +5,9 @@
 
   <testsuite name="devclockLogin"
     errors="0" failures="0" hostname="" id="" package="devclockLogin" skipped="0"
-    tests="1" time="19.56" timestamp="">
+    tests="1" time="6.978" timestamp="">
   
-    <testcase name="Can log in with an existing account" classname="devclockLogin" time="19.56" assertions="5">
+    <testcase name="Can log in with an existing account" classname="devclockLogin" time="6.978" assertions="5">
 
     
 

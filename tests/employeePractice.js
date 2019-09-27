@@ -11,61 +11,9 @@ module.exports = {
     after: browser => {
         moreEmployee.end()
     },
-    'Check for change, save, and cancel button. Change, Save, and cancel all entries': browser => {
-        var employee1 = {
-            Name: 'Ortiz Barnie',
-            Phone: '1234567890',
-            Title: 'OEC'
-        } //you can also declare this above module.exports
-
-        var employee2 = {
-            Name: 'Barn Man',
-            Phone: '2637849863',
-            Title: 'OTTC'
-        }
-        var employee3 = {
-            Name: 'Weaver PHILY',
-            Phone: '8755473849',
-            Title: 'GerMan'
-        }
-        var employee4 = {
-            Name: 'Osbone T-bone',
-            Phone: '8376453674',
-            Title: 'Eng DD'
-        }
-        var employee5 = {
-            Name: 'BER Dollie',
-            Phone: '9876543456',
-            Title: 'Front Dev'
-        }
-        var employee6 = {
-            Name: 'Will Harry',
-            Phone: '0987656789',
-            Title: 'Dev Fronty'
-        }
-        var employee7 = {
-            Name: 'Estrada Rude man',
-            Phone: '7836746356',
-            Title: 'Back Dev'
-        }
-        var employee8 = {
-            Name: 'White Louis',
-            Phone: '9878976432',
-            Title: 'Full Dev'
-        }
-        var employee9 = {
-            Name: 'Sparky Eve',
-            Phone: '7867564567',
-            Title: 'Manage Product person'
-        }
-        var employee10 = {
-            Name: 'Brewer Person',
-            Phone: '0909878786',
-            Title: 'Manage Sales man'
-        }
+    'Check for change, save, and cancel button. Change, Save, and cancel all entries': browser => {  
 
         moreEmployee
-        
             .click('[name="employee1"]')
             .clearValue('@Name')
             .setValue('@Name', employee1.Name)
@@ -225,17 +173,7 @@ module.exports = {
 
     },
     'Add Employee': browser => {
-        var newEmployee1 = {
-            Name: 'Funny Person',
-            Phone: '8498760987',
-            Title: 'Jobless'
-        }
-
-        var newEmployee2 = {
-            Name: 'Crazy Dude',
-            Phone: '1567489374',
-            Title: 'has one job'
-        }
+        
         moreEmployee
             .click('[name="addEmployee"]')
             .click('[name="employee11"]')
