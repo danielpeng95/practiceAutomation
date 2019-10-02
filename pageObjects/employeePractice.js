@@ -7,7 +7,6 @@ module.exports = {
         Title: '[name="titleEntry"]',
         Save: '[name="save"]'
     },
-
     var: employee1 = { //when it is in page object, you need ":" after var.
         Name: 'Ortiz Barnie',
         Phone: '1234567890',

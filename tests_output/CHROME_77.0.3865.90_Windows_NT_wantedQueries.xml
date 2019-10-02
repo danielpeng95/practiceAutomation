@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="3">
+
+  <testsuite name="wantedQueries"
+    errors="0" failures="0" hostname="" id="" package="wantedQueries" skipped="0"
+    tests="3" time="13.03" timestamp="">
+  
+    <testcase name="Enter Wanted" classname="wantedQueries" time="6.011" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Modified Wanted" classname="wantedQueries" time="4.388" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Cancel Wanted" classname="wantedQueries" time="2.629" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>

@@ -1,48 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites errors="0"
             failures="0"
-            tests="6">
+            tests="1">
 
   <testsuite name="weatherTests"
     errors="0" failures="0" hostname="" id="" package="weatherTests" skipped="0"
-    tests="6" time="5.824" timestamp="">
+    tests="1" time="3.163" timestamp="">
   
-    <testcase name="Search for city" classname="weatherTests" time="1.433" assertions="2">
+    <testcase name="check searches1" classname="weatherTests" time="3.163" assertions="6">
 
     
 
     
-    </testcase>
-  
-    <testcase name="Search for zip" classname="weatherTests" time="0.8310" assertions="2">
 
     
 
     
-    </testcase>
-  
-    <testcase name="Search for blank" classname="weatherTests" time="0.8000" assertions="2">
-
-    
-
-    
-    </testcase>
-  
-    <testcase name="Search for bad zip" classname="weatherTests" time="0.8460" assertions="2">
-
-    
-
-    
-    </testcase>
-  
-    <testcase name="Search again" classname="weatherTests" time="0.9910" assertions="2">
-
-    
-
-    
-    </testcase>
-  
-    <testcase name="Try again" classname="weatherTests" time="0.9230" assertions="2">
 
     
 
