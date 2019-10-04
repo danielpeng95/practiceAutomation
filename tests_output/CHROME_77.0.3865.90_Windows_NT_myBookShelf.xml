@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="3">
+
+  <testsuite name="myBookShelf"
+    errors="0" failures="0" hostname="" id="" package="myBookShelf" skipped="0"
+    tests="3" time="1.508" timestamp="">
+  
+    <testcase name="Check the entered name" classname="myBookShelf" time="1.225" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Cancel works right" classname="myBookShelf" time="0.1780" assertions="0">
+    </testcase>
+  
+    <testcase name="Does not acceept blank entries" classname="myBookShelf" time="0.1050" assertions="0">
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>

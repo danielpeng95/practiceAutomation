@@ -24,11 +24,15 @@ var customCommands = {
             .setValue('@last', object.last)
             .setValue('@email', object.email)
             .click('@next')
+        return this //if you dont have this, you have to rechain the browser
+    },
+    customVerify: function (object) {
+        this
             .verify.containsText('@checkName', object.first)
             .verify.containsText('@checkName', object.last)
             .verify.containsText('@checkEmail', object.email)
-            .verify.containsText('@checkLoan', object.checkLoan)
-            .verify.containsText('@checkProperty', object.checkProperty)
+            .verify.containsText('@checkLoan', object.checkLoan) //
+            .verify.containsText('@checkProperty', object.checkProperty) //
             .verify.containsText('@checkCity', object.city)
             .verify.containsText('@checkPurpose', object.checkHouse) //
             .verify.containsText('@checkFound', object.checkHome) //
@@ -38,12 +42,13 @@ var customCommands = {
             .verify.containsText('@checkScore', object.checkScore) //
             .verify.containsText('@checkCredit', object.bank)
             .click('@again')
+        return this
     }
 }
 module.exports = {
     url: 'http://localhost:3000/#/',
     commands: [customCommands],
-    elements: { 
+    elements: {
         start: '.home-btn',
         loan: '[id="loanTypes"]',
         property: '[id="propertyTypes"]',

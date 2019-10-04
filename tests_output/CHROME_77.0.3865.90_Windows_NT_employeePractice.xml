@@ -5,47 +5,9 @@
 
   <testsuite name="employeePractice"
     errors="0" failures="0" hostname="" id="" package="employeePractice" skipped="0"
-    tests="1" time="6.606" timestamp="">
+    tests="1" time="1.621" timestamp="">
   
-    <testcase name="Change Employee" classname="employeePractice" time="6.606" assertions="23">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
+    <testcase name="Can you edit ID?" classname="employeePractice" time="1.621" assertions="4">
 
     
 

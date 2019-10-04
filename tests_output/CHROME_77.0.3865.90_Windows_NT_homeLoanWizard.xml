@@ -1,95 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites errors="0"
             failures="0"
-            tests="1">
+            tests="2">
 
   <testsuite name="homeLoanWizard"
     errors="0" failures="0" hostname="" id="" package="homeLoanWizard" skipped="0"
-    tests="1" time="11.32" timestamp="">
+    tests="2" time="7.552" timestamp="">
   
-    <testcase name="fill test" classname="homeLoanWizard" time="11.32" assertions="42">
+    <testcase name="one fill test" classname="homeLoanWizard" time="4.624" assertions="1">
 
     
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
+    </testcase>
+  
+    <testcase name="one fill test2" classname="homeLoanWizard" time="2.928" assertions="1">
 
     
     </testcase>

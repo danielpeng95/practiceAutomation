@@ -1,4 +1,6 @@
-module.exports = [
+module.exports = 
+array =
+ [
     {
         loan: 'Home Purchase',
         checkLoan: 'Home',
@@ -47,6 +49,32 @@ module.exports = [
         last: 'Daniels',
         email: 'Jack@yahoo.com',
     },
+    {
+        loan: 'Refinance',
+        checkLoan: 'Refinance',
+        property: 'Townhome',
+        checkProperty: 'Town Home',
+        city: "indiana",
+        house: 'primary',
+        checkHouse: 'Primary',
+        home: 'no',
+        checkHome: 'False',
+        agent: 'yes',
+        checkAgent: 'True',
+        price: '1000',
+        down: '100',
+        score: 'good',
+        checkScore: 'Good',
+        bank: 'bankruptcy',
+        address1: '211 skyline dr',
+        address2: '',
+        address3: 'Indiana, PA 15701',
+        first: 'Funny',
+        last: 'Person',
+        email: 'FP@yahoo.com',
+    }
+],
+array2 = [
     {
         loan: 'Refinance',
         checkLoan: 'Refinance',

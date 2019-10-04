@@ -11,6 +11,14 @@ module.exports = {
     'fill test': browser => {
         addFromEditTest.forEach(test => {
             wizard.fill(test)
+                .customVerify(test) //the second custom command
         })
+    },
+    'one fill test': browser =>{
+        wizard.fill(array[0])
+    },
+    'one fill test2': browser => {
+        wizard.fill(array2[0])
     }
+
 }

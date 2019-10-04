@@ -1,9 +1,9 @@
 var moreEmployee
 
-function idCheck(pageObject){
+function idCheck(pageObject) {
     pageObject
         .click('[name="employee1"]')
-        .getText('#employeeID', function(result){
+        .getText('#employeeID', function (result) {
             // console.log(result.value) //this is a callback
             let idNumber = Number(result.value.slice(3)) //.slice(3) gets rid of the first 3 characters
             pageObject
@@ -11,42 +11,42 @@ function idCheck(pageObject){
                 .verify.ok(idNumber % 1 === 0, `The ID (${idNumber}) is a whole number.`)
         })
 }
-    
+
 var info = [{
-        number: "1",
-        name: "Bernie nah",
-        phone: "1234567890",
-        title: "Not Real Person",
-        number2: "2"
-    },
-    {
-        number: "2",
-        name: "Clark Kent",
-        phone: "1234567860",
-        title: "SuperMan",
-        number2: "1"
-    },
-    {
-        number: "3",
-        name: "YoMaMa PeaMan",
-        phone: "1234567899",
-        title: "Great Baker",
-        number2: "2"
-    },
-    {
-        number: "4",
-        name: "Billy Lanstmane",
-        phone: "1904599899",
-        title: "Generic",
-        number2: "2"
-    }
+    number: "1",
+    name: "Bernie nah",
+    phone: "1234567890",
+    title: "Not Real Person",
+    number2: "2"
+},
+{
+    number: "2",
+    name: "Clark Kent",
+    phone: "1234567860",
+    title: "SuperMan",
+    number2: "1"
+},
+{
+    number: "3",
+    name: "YoMaMa PeaMan",
+    phone: "1234567899",
+    title: "Great Baker",
+    number2: "2"
+},
+{
+    number: "4",
+    name: "Billy Lanstmane",
+    phone: "1904599899",
+    title: "Generic",
+    number2: "2"
+}
 ]
 
 function changeEmployee(pageObject, change) {
     pageObject
         .click(`[name="employee${change.number}"]`)
         .waitForElementVisible('#employeeTitle')
-        .getText('#employeeTitle', function(result) {
+        .getText('#employeeTitle', function (result) {
             console.log(result.value)
         })
         .clearValue('[name="nameEntry"]')
@@ -74,7 +74,7 @@ function clickByText(browser, text) { //browser or the page object // text, "Ber
 
 module.exports = {
     beforeEach: browser => {
-        moreEmployee = browser.page.employeePractice()
+        moreEmployee = browser.page.employeePracticePage()
         moreEmployee.navigate()
         moreEmployee
             .waitForElementPresent('body', 8000)
@@ -84,11 +84,17 @@ module.exports = {
     after: browser => {
         moreEmployee.end()
     },
-    'Change Employee': browser => {
-        info.forEach(test => {
-            changeEmployee(moreEmployee, test)
-        })
+    // 'Change Employee': browser => {
+    //     info.forEach(test => {
+    //         changeEmployee(moreEmployee, test)
+    //     })
+    // },
+    'Can you edit ID?': browser => {
+        moreEmployee
+            .click('[name="employee1"]')
+            .assert.containsText('#employeeID', "ID", 'ID is not editable') //if text, then ID is not editable.
     }
+
 
     // 'test for callback': browser => {
     //     idCheck(moreEmployee)
@@ -258,7 +264,7 @@ module.exports = {
 
     // },
     // 'Add Employee': browser => {
-        
+
     //     moreEmployee
     //         .click('[name="addEmployee"]')
     //         .click('[name="employee11"]')

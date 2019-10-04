@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="2"
+            tests="1">
+
+  <testsuite name="funFrame"
+    errors="1" failures="2" hostname="" id="" package="funFrame" skipped="0"
+    tests="1" time="34.82" timestamp="">
+  
+    <testcase name="Get into the frame, check for the uneditable body" classname="funFrame" time="34.82" assertions="4">
+
+    
+
+      <failure message="Testing if element &lt;[class=&#34;w3schools-logo&#34;]&gt; contains text: &#34;w3schools&#34;. Element could not be located in 1000 ms. - expected [0;32m&#34;w3schools&#34;[0m but got: [0;31m&#34;null&#34;[0m">    at Object.Get into the frame, check for the uneditable body (C:\Users\benpe\DevMountain\practice\practiceAutomation\tests\funFrame.js:10:21)
+    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
+
+      <failure message="Expected element &lt;[body[contenteditable=&#34;false&#34;]&gt; to be present - element was not found - expected [0;32m&#34;present&#34;[0m but got: [0;31m&#34;not present&#34;[0m">    at Object.Get into the frame, check for the uneditable body (C:\Users\benpe\DevMountain\practice\practiceAutomation\tests\funFrame.js:13:21)
+    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
+
+    <failure message="    at Object.Get into the frame, check for the uneditable body (C:\Users\benpe\DevMountain\practice\practiceAutomation\tests\funFrame.js:13:21)">    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>
