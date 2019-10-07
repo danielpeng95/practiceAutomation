@@ -1,21 +1,21 @@
-10:52:59.896 INFO [GridLauncherV3.parse] - Selenium server version: 3.141.59, revision: e82be7d358
-10:52:59.974 INFO [GridLauncherV3.lambda$buildLaunchers$3] - Launching a standalone Selenium Server on port 4444
-2019-10-04 10:53:00.051:INFO::main: Logging initialized @361ms to org.seleniumhq.jetty9.util.log.StdErrLog
-10:53:00.363 INFO [WebDriverServlet.<init>] - Initialising WebDriverServlet
-10:53:01.000 INFO [SeleniumServer.boot] - Selenium Server is up and running on port 4444
-10:53:01.489 INFO [ActiveSessionFactory.apply] - Capabilities are: {
+09:18:11.957 INFO [GridLauncherV3.parse] - Selenium server version: 3.141.59, revision: e82be7d358
+09:18:12.121 INFO [GridLauncherV3.lambda$buildLaunchers$3] - Launching a standalone Selenium Server on port 4444
+2019-10-07 09:18:12.243:INFO::main: Logging initialized @711ms to org.seleniumhq.jetty9.util.log.StdErrLog
+09:18:12.822 INFO [WebDriverServlet.<init>] - Initialising WebDriverServlet
+09:18:13.707 INFO [SeleniumServer.boot] - Selenium Server is up and running on port 4444
+09:18:14.426 INFO [ActiveSessionFactory.apply] - Capabilities are: {
   "acceptSslCerts": true,
   "browserName": "chrome",
   "chromeOptions": {
     "w3c": false
   },
-  "name": "Home Loan Wizard"
+  "name": "Type Test"
 }
-10:53:01.504 INFO [ActiveSessionFactory.lambda$apply$11] - Matched factory org.openqa.selenium.grid.session.remote.ServicedSession$Factory (provider: org.openqa.selenium.chrome.ChromeDriverService)
-Starting ChromeDriver 77.0.3865.40 (f484704e052e0b556f8030b65b953dce96503217-refs/branch-heads/3865@{#442}) on port 26405
+09:18:14.432 INFO [ActiveSessionFactory.lambda$apply$11] - Matched factory org.openqa.selenium.grid.session.remote.ServicedSession$Factory (provider: org.openqa.selenium.chrome.ChromeDriverService)
+Starting ChromeDriver 77.0.3865.40 (f484704e052e0b556f8030b65b953dce96503217-refs/branch-heads/3865@{#442}) on port 17166
 Only local connections are allowed.
 Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-[1570207985.458][WARNING]: Timed out connecting to Chrome, retrying...
-10:53:07.595 INFO [ProtocolHandshake.createSession] - Detected dialect: OSS
-10:53:07.986 INFO [RemoteSession$Factory.lambda$performHandshake$0] - Started new session 6dc208f677de9cbbb8f98e5d7042df8d (org.openqa.selenium.chrome.ChromeDriverService)
-10:53:15.904 INFO [ActiveSessions$1.onStop] - Removing session 6dc208f677de9cbbb8f98e5d7042df8d (org.openqa.selenium.chrome.ChromeDriverService)
+[1570461498.803][WARNING]: Timed out connecting to Chrome, retrying...
+09:18:21.247 INFO [ProtocolHandshake.createSession] - Detected dialect: OSS
+09:18:21.788 INFO [RemoteSession$Factory.lambda$performHandshake$0] - Started new session 1b8743b99ce1409c148fa15961d6e690 (org.openqa.selenium.chrome.ChromeDriverService)
+09:18:33.025 INFO [ActiveSessions$1.onStop] - Removing session 1b8743b99ce1409c148fa15961d6e690 (org.openqa.selenium.chrome.ChromeDriverService)

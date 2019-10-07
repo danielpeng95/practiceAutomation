@@ -12,12 +12,23 @@ module.exports = {
             .waitForElementVisible('@start')
             .click('@start')
             .waitForElementVisible('@current')
+            .api.pause(1000) //remember to have .api in front when working with page objects
+        typo
             .getText('@current', function (word) {
-                console.log(word.value)
-                let t = console.log(word.value)
+                let t = word.value
+                console.log(t)
                 typo.waitForElementVisible('@input')
                 typo.setValue('@input', t)
-                typo.pause(10000)
             })
+            .api.pause(1000)
+            
+        // typo.waitForElementVisible('@WPM')
+        //     .getText('@WPM', function (result) {
+        //         console.log('Speed: ' + result.value + ' WPM')
+        //     })
+        // typo.waitForElementVisible('@Accuracy')
+        //     .getText('@Accuracy', function (result) {
+        //         console.log('Accuracy: ' + result.value + ' %')
+        //     })
     }
 }

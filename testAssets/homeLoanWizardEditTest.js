@@ -1,5 +1,5 @@
 module.exports = 
-array =
+array1 =
  [
     {
         loan: 'Home Purchase',
