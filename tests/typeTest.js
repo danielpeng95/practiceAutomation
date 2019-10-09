@@ -20,19 +20,20 @@ module.exports = {
                 let splitText = t.split(" ")
                 splitText.pop()
                 let shortText = splitText.join(" ")
-
+                typo.api.pause(1000)
                 typo.waitForElementVisible('@input')
+                typo.api.pause(1000)
                 typo.setValue('@input', shortText)
             })
-            .api.pause(1000)
-            
+        // .api.pause(1000)
+
         typo.waitForElementVisible('@WPM')
             .getText('@WPM', function (result) {
-                console.log('Speed: ' + result.value + ' WPM')
+                console.log('Speed: ' + result.value)
             })
         typo.waitForElementVisible('@Accuracy')
             .getText('@Accuracy', function (result) {
-                console.log('Accuracy: ' + result.value + ' %')
+                console.log('Accuracy: ' + result.value)
             })
     }
 }

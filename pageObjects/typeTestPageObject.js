@@ -1,6 +1,7 @@
 module.exports = {
     /**
      *    this is my first type Test
+     *      this is a basic test
      * */
     // url: 'https://www.keyhero.com/free-typing-test/',
 
@@ -15,6 +16,7 @@ module.exports = {
 
     /**
     **   this is my second type Test
+        this is a more advance test to write
     **/
     url: 'https://www.ratatype.com/typing-test/test/',
 
