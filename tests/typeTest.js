@@ -24,7 +24,7 @@ module.exports = {
                 typo.waitForElementVisible('@input')
                 typo.setValue('@input', shortText)
             })
-            // .api.pause(1000)
+            .api.pause(1000)
             
         typo.waitForElementVisible('@WPM')
             .getText('@WPM', function (result) {
