@@ -5,9 +5,9 @@
 
   <testsuite name="readWriteFile"
     errors="0" failures="0" hostname="" id="" package="readWriteFile" skipped="0"
-    tests="1" time="0.01100" timestamp="">
+    tests="1" time="0.01800" timestamp="">
   
-    <testcase name="Test the file" classname="readWriteFile" time="0.01100" assertions="0">
+    <testcase name="Test the file" classname="readWriteFile" time="0.01800" assertions="0">
     </testcase>
   
 

@@ -10,7 +10,7 @@ module.exports = {
         let fooObject = JSON.parse(fileInfo2)
         console.log(fooObject)
 
-        let newFileInfo = { foo: "yo ma ma" }
+        let newFileInfo = { foo: "this is toooooo coool" }
 
         let newFileData = JSON.stringify(newFileInfo)
 
