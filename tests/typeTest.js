@@ -17,18 +17,22 @@ module.exports = {
             .getText('@current', function (word) {
                 let t = word.value
                 console.log(t)
+                let splitText = t.split(" ")
+                splitText.pop()
+                let shortText = splitText.join(" ")
+
                 typo.waitForElementVisible('@input')
-                typo.setValue('@input', t)
+                typo.setValue('@input', shortText)
             })
-            .api.pause(1000)
+            // .api.pause(1000)
             
-        // typo.waitForElementVisible('@WPM')
-        //     .getText('@WPM', function (result) {
-        //         console.log('Speed: ' + result.value + ' WPM')
-        //     })
-        // typo.waitForElementVisible('@Accuracy')
-        //     .getText('@Accuracy', function (result) {
-        //         console.log('Accuracy: ' + result.value + ' %')
-        //     })
+        typo.waitForElementVisible('@WPM')
+            .getText('@WPM', function (result) {
+                console.log('Speed: ' + result.value + ' WPM')
+            })
+        typo.waitForElementVisible('@Accuracy')
+            .getText('@Accuracy', function (result) {
+                console.log('Accuracy: ' + result.value + ' %')
+            })
     }
 }

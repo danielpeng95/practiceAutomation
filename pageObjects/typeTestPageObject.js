@@ -23,7 +23,7 @@ module.exports = {
         current: '[class="mainTxt"]',
         input: '[spellcheck="false"]',
         WPM: { selector: '(//div[@class="blue"])[1]', locateStrategy: 'xpath' },
-        Accuracy: { selector: '(//div[@class="blue"])[1]', locateStrategy: 'xpath' }
+        Accuracy: { selector: '(//div[@class="blue"])[2]', locateStrategy: 'xpath' }
     }
 
     
