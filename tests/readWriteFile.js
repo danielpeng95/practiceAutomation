@@ -6,15 +6,15 @@ module.exports = {
         fileInfo.foo = "something else"
         console.log(`The file's value for "foo" is: ${fileInfo.foo}`)
 
-        var fileInfo2 = fs.readFileSync("../testAssets/readWriteFile.json")
+        var fileInfo2 = fs.readFileSync("./testAssets/readWriteFile.json")
         let fooObject = JSON.parse(fileInfo2)
         console.log(fooObject)
 
-        let newFileInfo = { foo: "Something completely different" }
+        let newFileInfo = { foo: "yo ma ma" }
 
         let newFileData = JSON.stringify(newFileInfo)
 
-        fs.writeFileSync('../testAssets/readWriteFile.json', newFileData)
+        fs.writeFileSync('./testAssets/readWriteFile.json', newFileData)
         // fs.writeFileSync(`./testAssets/readWriteFile${new Date().getTime()}.json`, newFileData) //so it doesn't overwrite
 
     }
