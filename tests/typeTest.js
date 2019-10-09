@@ -22,9 +22,10 @@ module.exports = {
                 let shortText = splitText.join(" ")
                 typo.api.pause(1000)
                 typo.waitForElementVisible('@input')
-                typo.api.pause(1000)
+                typo.api.pause(2000)
                 typo.setValue('@input', shortText)
             })
+            
         // .api.pause(1000)
 
         typo.waitForElementVisible('@WPM')

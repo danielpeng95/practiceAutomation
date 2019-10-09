@@ -17,6 +17,8 @@ module.exports = {
     /**
     **   this is my second type Test
         this is a more advance test to write
+        this test is kinda buggy, it works most of the time tho.
+        but once in a while, it will not work.
     **/
     url: 'https://www.ratatype.com/typing-test/test/',
 
