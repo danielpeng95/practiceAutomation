@@ -1,5 +1,9 @@
 module.exports = {
     url: 'https://devmountain-qa.github.io/weatherman/build/index.html',
+    commands: [{
+        
+        
+    }],
     
     // elements: { //one way to write CSS selector
     //     searchBar: '[type="text"]',
