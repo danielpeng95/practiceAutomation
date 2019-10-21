@@ -1,17 +1,5 @@
 var moreEmployee
 
-function idCheck(pageObject) {
-    pageObject
-        .click('[name="employee1"]')
-        .getText('#employeeID', function (result) {
-            // console.log(result.value) //this is a callback
-            let idNumber = Number(result.value.slice(3)) //.slice(3) gets rid of the first 3 characters
-            pageObject
-                .verify.ok(idNumber > 0, `The ID (${idNumber}) is a positive number.`)
-                .verify.ok(idNumber % 1 === 0, `The ID (${idNumber}) is a whole number.`)
-        })
-}
-
 var info = [{
     number: "1",
     name: "Bernie nah",
@@ -41,6 +29,18 @@ var info = [{
     number2: "2"
 }
 ]
+
+function idCheck(pageObject) {
+    pageObject
+        .click('[name="employee1"]')
+        .getText('#employeeID', function (result) {
+            // console.log(result.value) //this is a callback
+            let idNumber = Number(result.value.slice(3)) //.slice(3) gets rid of the first 3 characters
+            pageObject
+                .verify.ok(idNumber > 0, `The ID (${idNumber}) is a positive number.`)
+                .verify.ok(idNumber % 1 === 0, `The ID (${idNumber}) is a whole number.`)
+        })
+}
 
 function changeEmployee(pageObject, change) {
     pageObject
