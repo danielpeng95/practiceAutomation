@@ -19,10 +19,7 @@ module.exports = {
             browser.switchWindow(wikiWindow)
             browser.closeWindow()
         })
-
-
     },
-
 }
 
 
